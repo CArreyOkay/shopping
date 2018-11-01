@@ -59,7 +59,8 @@
 	        <div class=" container">
 	            <!-- Brand and toggle get grouped for better mobile display -->
 	            <div class="navbar-header">
-	                <a class=" navbar-brand" href="${flowExecutionUrl}&_eventId=home"><b>BrandGenius</b></a>
+	                <a style="color: #D5EEE9;font-family: cursive;padding: 8px;font-size-adjust: inherit;font-variant: small-caps;font-weight: bolder;" class="footgeniuslogo navbar-brand " href="${contextRoot}/home">
+				<b><i>BrandGenius</i></b></a>
 	            </div>
 			</div>
 		</nav>
@@ -67,4 +68,4 @@
 		
 		<!-- Page Content -->
 
-		<div class="content">
+		<div class="body1 content">

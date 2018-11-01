@@ -1365,12 +1365,12 @@ input, button, select, textarea {
 }
 
 a {
-	color: #4582ec;
+	color: #00112f;
 	text-decoration: none
 }
 
 a:hover, a:focus {
-	color: #134fb8;
+	color: 00112f;
 	text-decoration: underline
 }
 
@@ -1881,8 +1881,6 @@ pre code {
 	{
 	position: relative;
 	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px
 }
 
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6,

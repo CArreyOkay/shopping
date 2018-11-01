@@ -52,22 +52,13 @@
 							
 							<div class="form-group">
 								<label class="control-label col-md-4" for="postalCode">Postal Code</label>
-								<div class="col-md-8">
+								<div class="col-md-8" >
 									<sf:input type="text" path="postalCode" class="form-control"
-										placeholder="XXXXXX" />
+										placeholder="XXXXXX" pattern="\d{6}$"/>
 									<sf:errors path="postalCode" cssClass="help-block" element="em"/> 
 								</div>
-							</div>							
-						
-							<div class="form-group">
-								<label class="control-label col-md-4" for="state">State</label>
-								<div class="col-md-8">
-									<sf:input type="text" path="state" class="form-control"
-										placeholder="Enter State Name" />
-									<sf:errors path="state" cssClass="help-block" element="em"/> 
-								</div>
 							</div>
-
+							
 							<div class="form-group">
 								<label class="control-label col-md-4" for="country">Country</label>
 								<div class="col-md-8">
@@ -76,6 +67,18 @@
 									<sf:errors path="country" cssClass="help-block" element="em"/> 
 								</div>
 							</div>
+														
+						
+							<div class="form-group">
+								<label class="control-label col-md-4" for="state">State</label>
+								<div class="col-md-8">
+									<sf:input type="text" path="state" class="form-control"
+										placeholder="Enter State Name" pattern = "^[a-zA-Z]+$"/>
+									<sf:errors path="state" cssClass="help-block" element="em"/> 
+								</div>
+							</div>
+
+							
 							
 							
 							<div class="form-group">
@@ -106,5 +109,5 @@
 		
 		
 	</div>
-
+</div>
 <%@include file="../flows-shared/footer.jsp" %>			

@@ -36,6 +36,17 @@
 <!-- Bootstrap Readable Theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
+<!-- homepage CSS -->
+<link href="${css}/one-page-wonder.min.css" rel="stylesheet">
+
+<!-- Fonts -->
+<!-- Custom fonts for this template -->
+<link
+	href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
+	rel="stylesheet">
 
 <!-- Bootstrap DataTables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
@@ -56,82 +67,103 @@
 <body>
 
 	<div class=" se-pre-con"></div>
-	<div><!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%></div>
-	<div class=" wrapper container">
 
-		
 
-		<!-- Page Content -->
 
+	<!-- Loading the home content -->
+	<c:if test="${userClickHome == true }">
+		<%@include file="home.jsp"%>
+	</c:if>
+
+	<!-- Page Content -->
+	<c:if
+		test="${userClickCategoryProducts == true or
+		userClickShowProduct == true or 
+		userClickAllProducts == true or 
+		userClickCategoryProducts == true or 
+		userClickAbout == true or 
+		userClickContact == true or 
+		userClickManageProduct == true or 
+		userClickShowCart == true or
+		userClickFeedback == true}">
+		<div>
+			<!-- Navigation -->
+			<%@include file="./shared/navbar.jsp"%></div>
+		<div class=" wrapper container">
+	</c:if>
+	<c:if test="${userClickAbout == true or userClickContact == true}">
 		<div class="col-md-12 content ">
+	</c:if>
+	<c:if
+		test="${userClickAllProducts == true or userClickCategoryProducts == true or userClickManageProduct == true}">
+		<div class="table-responsive col-md-12 content ">
+	</c:if>
+	<!-- Load only when user clicks about -->
+	<c:if test="${userClickAbout == true }">
+		<%@include file="about.jsp"%>
+	</c:if>
 
-			<!-- Loading the home content -->
-			<c:if test="${userClickHome == true }">
-				<%@include file="home.jsp"%>
-			</c:if>
+	<!-- Load only when user clicks contact -->
+	<c:if test="${userClickContact == true }">
+		<%@include file="contact.jsp"%>
+	</c:if>
 
-			<!-- Load only when user clicks about -->
-			<c:if test="${userClickAbout == true }">
-				<%@include file="about.jsp"%>
-			</c:if>
-
-			<!-- Load only when user clicks contact -->
-			<c:if test="${userClickContact == true }">
-				<%@include file="contact.jsp"%>
-			</c:if>
-
-			<!-- Load only when user clicks contact -->
-			<c:if
-				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
-				<%@include file="listProducts.jsp"%>
-			</c:if>
-
-
-			<!-- Load only when user clicks show product -->
-			<c:if test="${userClickShowProduct == true}">
-				<%@include file="singleProduct.jsp"%>
-			</c:if>
-
-			<!-- Load only when user clicks manage product -->
-			<c:if test="${userClickManageProduct == true}">
-				<%@include file="manageProduct.jsp"%>
-			</c:if>
-
-			<!-- Load only when user clicks manage product -->
-			<c:if test="${userClickShowCart == true}">
-				<%@include file="cart.jsp"%>
-			</c:if>
+	<!-- Load only when user clicks contact -->
+	<c:if
+		test="${userClickAllProducts == true or userClickCategoryProducts == true }">
+		<%@include file="listProducts.jsp"%>
+	</c:if>
+	<!-- loading feedback submitted form -->
+	<c:if test="${userClickFeedback == true}">
+		<%@include file="feedback.jsp"%>
+	</c:if>
 
 
-		</div>
+	<!-- Load only when user clicks show product -->
+	<c:if test="${userClickShowProduct == true}">
+		<%@include file="singleProduct.jsp"%>
+	</c:if>
 
+	<!-- Load only when user clicks manage product -->
+	<c:if test="${userClickManageProduct == true}">
+		<%@include file="manageProduct.jsp"%>
+	</c:if>
 
-		<!-- jQuery -->
-		<script src="${js}/jquery.js"></script>
+	<!-- Load only when user clicks manage product -->
+	<c:if test="${userClickShowCart == true}">
+		<%@include file="cart.jsp"%>
+	</c:if>
 
-		<script src="${js}/jquery.validate.js"></script>
-
-		<!-- Bootstrap Core JavaScript -->
-		<script src="${js}/bootstrap.min.js"></script>
-
-		<!-- DataTable Plugin -->
-		<script src="${js}/jquery.dataTables.js"></script>
-
-		<!-- DataTable Bootstrap Script -->
-		<script src="${js}/dataTables.bootstrap.js"></script>
-
-		<!-- DataTable Bootstrap Script -->
-		<script src="${js}/bootbox.min.js"></script>
-
-		<!-- Self coded javascript -->
-		<script src="${js}/myapp.js"></script>
 
 	</div>
-	
-		<div style="width: 100%" class="footgeniusfooter ">
-			<!-- Footer comes here -->
-			<%@include file="./shared/footer.jsp"%></div>
+
+
+	<!-- jQuery -->
+
+	<script src="${js}/jquery.js"></script>
+
+	<script src="${js}/jquery.validate.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="${js}/bootstrap.min.js"></script>
+
+	<!-- DataTable Plugin -->
+	<script src="${js}/jquery.dataTables.js"></script>
+
+	<!-- DataTable Bootstrap Script -->
+	<script src="${js}/dataTables.bootstrap.js"></script>
+
+	<!-- DataTable Bootstrap Script -->
+	<script src="${js}/bootbox.min.js"></script>
+
+	<!-- Self coded javascript -->
+	<script src="${js}/myapp.js"></script>
+
+	</div>
+
+	<div style="width: 100%" class="footgeniusfooter">
+		<!-- Footer comes here -->
+		<%@include file="./shared/footer.jsp"%></div>
 
 </body>
 

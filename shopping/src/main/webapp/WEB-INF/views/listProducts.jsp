@@ -1,5 +1,7 @@
+
 <b>
-	<div class="container">
+
+	<div class="body1 wrapper container">
 
 		<div class="row">
 
@@ -51,15 +53,14 @@
 				</div>
 
 
-				<div class="row">
+				<div class="col-lg-12">
 
-					<div class="col-xs-12">
+					<div class="col-lg-12">
 						<b>
 
 							<table id="productListTable"
-								class="table table-striped table-borderd">
-
-
+								class="table table-striped table-borderd ">
+								<div class = "table-responsive"></div>
 								<thead>
 
 									<tr>
@@ -73,6 +74,7 @@
 									</tr>
 
 								</thead>
+
 
 
 								<tfoot>

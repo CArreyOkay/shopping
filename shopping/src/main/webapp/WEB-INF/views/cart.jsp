@@ -1,10 +1,10 @@
 <c:set var="availableCount" value="${userModel.cart.cartLines}" />
-<div class="container">
+<div class="body1 container">
 
 
 	<c:if test="${not empty message}">
 		
-		<div class="alert alert-info">
+		<div class="container alert alert-info">
 			<h3 class="text-center">${message}</h3>
 		</div>		
 	

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import net.ashu.shopping.service.CartService;
+import net.ashu.backend.dao.CategoryDAO;
 
 @Controller
 @RequestMapping("/cart")
@@ -19,13 +20,15 @@ public class CartController {
 	
 	@Autowired
 	private CartService cartService;
+	@Autowired
+	private CategoryDAO categoryDAO;
 	@RequestMapping("/show")
 	public ModelAndView showCart(@RequestParam(name = "result", required = false) String result) {
 		
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("title", "Shopping Cart");
 		mv.addObject("userClickShowCart", true);
-		
+		mv.addObject("categories", categoryDAO.list());
 		if(result!=null) {
 			switch(result) {
 				case "added":

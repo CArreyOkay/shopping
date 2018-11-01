@@ -28,7 +28,7 @@
 <link href="${css}/myapp.css" rel="stylesheet">
 
 
-<title>Online Shopping - FlowException</title>
+<title>BrandGenius - FlowException</title>
 
 </head>
 
@@ -46,7 +46,7 @@
 		</nav>
 			
 		
-		<div class="content">
+		<div class="body1 content">
 		
 			<div class="container">
 			

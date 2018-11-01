@@ -13,7 +13,8 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a style="color: #D5EEE9;font-family: cursive;padding: 8px;font-size-adjust: inherit;font-variant: small-caps;font-weight: bolder;" class="footgeniuslogo navbar-brand " href="${contextRoot}/home"><b><i>BrandGenius</i></b></a>
+				<a style="color: #D5EEE9;font-family: cursive;padding: 8px;font-size-adjust: inherit;font-variant: small-caps;font-weight: bolder;" class="footgeniuslogo navbar-brand " href="${contextRoot}/home">
+				<b><i>BrandGenius</i></b></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
@@ -28,7 +29,6 @@
 						<li id="manageProduct"><a
 							href="${contextRoot}/manage/product">Manage Product</a></li>
 					</security:authorize>
-
 					<li id="listProducts" class="dropdown"><a
 						class="btn btn-default dropdown-toggle" id="dropdownMenu1"
 						data-toggle="dropdown" aria-haspopup="true"

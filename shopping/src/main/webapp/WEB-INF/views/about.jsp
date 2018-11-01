@@ -1,6 +1,7 @@
-<div class="wrapper container">
 
-	<div class="row row-lg-12">	
+<div class="body1 container">
+
+	<div class="row">	
 		
 		<h1>About Us</h1>
 		<hr/>
